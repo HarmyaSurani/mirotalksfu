@@ -4,7 +4,7 @@ const os = require('os');
 const ifaces = os.networkInterfaces();
 
 const getLocalIp = () => {
-    let localIp = '127.0.0.1';
+    let localIp = '213.199.33.186';
     let checkIp = true;
     Object.keys(ifaces).forEach((ifname) => {
         for (const iface of ifaces[ifname]) {
@@ -27,7 +27,7 @@ module.exports = {
     server: {
         listen: {
             // app listen on
-            ip: '0.0.0.0',
+            ip: '213.199.33.186',
             port: process.env.PORT || 3010,
         },
         ssl: {
@@ -40,7 +40,7 @@ module.exports = {
                 origin: Allow specified origin es ['https://example.com', 'https://subdomain.example.com', 'http://localhost:3010'] or all origins if not specified
                 methods: Allow only GET and POST methods
             */
-            origin: '*',
+            origin: '213.199.33.186:3010',
             methods: ['GET', 'POST'],
         },
         recording: {
